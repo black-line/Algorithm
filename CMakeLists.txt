@@ -3,4 +3,4 @@ project(Algorithm)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(Algorithm codeup/6128.cpp)
+add_executable(Algorithm codeup/1993.cpp)
