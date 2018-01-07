@@ -1,7 +1,13 @@
 #include <iostream>
 #include <cstdio>
-#include <cstring>
 #include <cmath>
+#include <vector>
+#include <set>
+#include <string>
+#include <map>
+#include <queue>
+#include <stack>
+#include <utility>
 #include <algorithm>
 #include <cstdbool>
 #include <iomanip>
@@ -20,6 +26,7 @@ const double eps = 1e-8;
 
 
 int main() {
+    freopen("..\\in.txt", "r", stdin);
 
     return 0;
 }
