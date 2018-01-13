@@ -1,3 +1,7 @@
+//
+// Created by jessy on 01/11/18.
+//
+
 #include <iostream>
 #include <cstdio>
 #include <cmath>
@@ -28,11 +32,22 @@ const double eps = 1e-8;
 
 int main() {
     freopen("..\\in.txt", "r", stdin);
-
+    int num[10];
+    for (int i = 0; i < 10; ++i) {
+        scanf("%d", num + i);
+    }
+    for (int j = 1; j < 10; ++j) {
+        if (num[j] != 0) {
+            printf("%d", j);
+            num[j]--;
+            break;
+        }
+    }
+    for (int k = 0; k < 10; ++k) {
+        for (int i = 0; i < num[k]; ++i) {
+            printf("%d", k);
+        }
+    }
+    printf("\n");
     return 0;
 }
-
-// cout << setiosflags(ios::fixed) << setprecision(2) << 123.45678 << endl;
-/*
- * while(gets(str)!=NULL){}
- */
