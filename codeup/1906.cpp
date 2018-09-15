@@ -1,3 +1,8 @@
+/*
+ * Author: Zequn Wu
+ * date: 9/15/18 4:02 PM
+ */
+
 #include <iostream>
 #include <cstdio>
 #include <cmath>
@@ -28,11 +33,15 @@ const double eps = 1e-8;
 
 int main() {
     freopen("../in.txt", "r", stdin);
-
+    char a[20], b[20];
+    while (scanf("%s%s", a, b) != EOF) {
+        int result = 0;
+        for (int i = 0; i < strlen(a); ++i) {
+            for (int j = 0; j < strlen(b); ++j) {
+                result += (a[i] - '0') * (b[j] - '0');
+            }
+        }
+        printf("%d\n", result);
+    }
     return 0;
 }
-
-// cout << setiosflags(ios::fixed) << setprecision(2) << 123.45678 << endl;
-/*
- * while(gets(str)!=NULL){}
- */

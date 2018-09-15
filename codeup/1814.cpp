@@ -1,3 +1,8 @@
+/*
+ * Author: Zequn Wu
+ * date: 9/15/18 4:02 PM
+ */
+
 #include <iostream>
 #include <cstdio>
 #include <cmath>
@@ -28,11 +33,21 @@ const double eps = 1e-8;
 
 int main() {
     freopen("../in.txt", "r", stdin);
-
+    int l, m;
+    while (scanf("%d%d", &l, &m), l || m) {
+        int road[10010] = {0};
+        while (m--) {
+            int a, b;
+            scanf("%d%d", &a, &b);
+            for (int i = a; i <= b; ++i) {
+                road[i] = 1;
+            }
+        }
+        int count = 0;
+        for (int j = 0; j <= l; ++j) {
+            if (road[j])count++;
+        }
+        printf("%d\n", l + 1 - count);
+    }
     return 0;
 }
-
-// cout << setiosflags(ios::fixed) << setprecision(2) << 123.45678 << endl;
-/*
- * while(gets(str)!=NULL){}
- */

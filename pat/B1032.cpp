@@ -1,3 +1,8 @@
+/*
+ * Author: Zequn Wu
+ * date: 9/15/18 3:50 PM
+ */
+
 #include <iostream>
 #include <cstdio>
 #include <cmath>
@@ -25,14 +30,25 @@ const double eps = 1e-8;
 #define MoreEqu(a, b) (((a)-(b))>(-eps))
 #define LessEqu(a, b) (((a)-(b))<(eps))
 
+const int maxn = 100010;
+int s[maxn] = {0};
 
 int main() {
     freopen("../in.txt", "r", stdin);
-
+    int N;
+    scanf("%d", &N);
+    while (N--) {
+        int a, b;
+        scanf("%d%d", &a, &b);
+        s[a] += b;
+    }
+    int highestId = -1, highestScore = -1;
+    for (int i = 0; i < maxn; ++i) {
+        if (s[i] > highestScore) {
+            highestId = i;
+            highestScore = s[i];
+        }
+    }
+    printf("%d %d", highestId, highestScore);
     return 0;
 }
-
-// cout << setiosflags(ios::fixed) << setprecision(2) << 123.45678 << endl;
-/*
- * while(gets(str)!=NULL){}
- */

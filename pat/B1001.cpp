@@ -1,3 +1,8 @@
+/*
+ * Author: Zequn Wu
+ * date: 9/15/18 3:41 PM
+ */
+
 #include <iostream>
 #include <cstdio>
 #include <cmath>
@@ -28,11 +33,18 @@ const double eps = 1e-8;
 
 int main() {
     freopen("../in.txt", "r", stdin);
-
+    int n;
+    scanf("%d", &n);
+    int count = 0;
+    while (n != 1) {
+        if (n % 2) {
+            n = (3 * n + 1) / 2;
+            count++;
+        } else {
+            n /= 2;
+            count++;
+        }
+    }
+    printf("%d\n", count);
     return 0;
 }
-
-// cout << setiosflags(ios::fixed) << setprecision(2) << 123.45678 << endl;
-/*
- * while(gets(str)!=NULL){}
- */

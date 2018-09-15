@@ -1,3 +1,8 @@
+/*
+ * Author: Zequn Wu
+ * date: 9/15/18 4:03 PM
+ */
+
 #include <iostream>
 #include <cstdio>
 #include <cmath>
@@ -28,11 +33,17 @@ const double eps = 1e-8;
 
 int main() {
     freopen("../in.txt", "r", stdin);
-
+    int n;
+    while (scanf("%d", &n) != EOF) {
+        int oddNum = 0, evenNum = 0;
+        while (n--) {
+            int a;
+            scanf("%d", &a);
+            if (a % 2)oddNum++;
+            else evenNum++;
+        }
+        if (evenNum > oddNum)printf("NO\n");
+        else printf("YES\n");
+    }
     return 0;
 }
-
-// cout << setiosflags(ios::fixed) << setprecision(2) << 123.45678 << endl;
-/*
- * while(gets(str)!=NULL){}
- */

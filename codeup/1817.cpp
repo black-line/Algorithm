@@ -1,3 +1,8 @@
+/*
+ * Author: Zequn Wu
+ * date: 9/15/18 4:02 PM
+ */
+
 #include <iostream>
 #include <cstdio>
 #include <cmath>
@@ -25,14 +30,24 @@ const double eps = 1e-8;
 #define MoreEqu(a, b) (((a)-(b))>(-eps))
 #define LessEqu(a, b) (((a)-(b))<(eps))
 
+int strToInt(char a[]) {
+    int n = 0, flag = 1;
+    for (int i = 0; i < strlen(a); ++i) {
+        if (a[i] == '-')flag = -1;
+        else if (a[i] != ',') {
+            n = n * 10 + a[i] - '0';
+        }
+    }
+    return n * flag;
+}
 
 int main() {
     freopen("../in.txt", "r", stdin);
-
+    char a[20], b[20];
+    while (scanf("%s %s", a, b) != EOF) {
+        int c = strToInt(a);
+        int d = strToInt(b);
+        printf("%d\n", c + d);
+    }
     return 0;
 }
-
-// cout << setiosflags(ios::fixed) << setprecision(2) << 123.45678 << endl;
-/*
- * while(gets(str)!=NULL){}
- */
