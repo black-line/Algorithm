@@ -32,6 +32,7 @@ int main() {
     return 0;
 }
 
+// 输出小数点后两位
 // cout << setiosflags(ios::fixed) << setprecision(2) << 123.45678 << endl;
 /*
  * while(gets(str)!=NULL){}
