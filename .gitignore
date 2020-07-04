@@ -1,3 +1,6 @@
 .idea/
+.vscode/
 cmake-build-debug/
-
+projects/
+exec/
+practice.cpp
